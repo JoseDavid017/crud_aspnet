@@ -2,92 +2,91 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
         <!--navbar-->
-        
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-    <div class="container">
 
-        <a class="navbar-brand fw-bold d-flex align-items-center" href="Default.aspx">
-            <img src="/Content/LOGO.PNG" alt="JA Solutions"
-                width="40" height="35" class="me-2" />
-            JA Solutions
-        </a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container">
 
-        <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#menuPrincipal"
-            aria-controls="menuPrincipal"
-            aria-expanded="false"
-            aria-label="Abrir menú">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <a class="navbar-brand fw-bold d-flex align-items-center" href="Default.aspx">
+                    <img src="/Content/LOGO.PNG" alt="JA Solutions"
+                        width="40" height="35" class="me-2" />
+                    JA Solutions
+                </a>
 
-        <div class="collapse navbar-collapse" id="menuPrincipal">
-            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="Default.aspx">Inicio</a>
-                </li>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
 
-                <li class="nav-item">
-                    <a class="nav-link" href="Productos.aspx">Productos</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Default.aspx">Inicio</a>
+                        </li>
 
-                <!-- Servicios -->
-                <li class="nav-item">
-                    <a class="nav-link" href="ALARMAS.aspx">Sistemas de alarmas</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Productos.aspx">Productos</a>
+                        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="SVC.aspx">Sistemas de vigilancia</a>
-                </li>
+                        <!-- Servicios -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="ALARMAS.aspx">Sistemas de alarmas</a>
+                        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="IMEI.aspx">Mantenimiento de equipos</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="SVC.aspx">Sistemas de vigilancia</a>
+                        </li>
 
-                <!-- Opciones para visitantes -->
-                <asp:PlaceHolder ID="MenuVisitante" runat="server">
+                        <li class="nav-item">
+                            <a class="nav-link" href="IMEI.aspx">Mantenimiento de equipos</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="Login.aspx">Iniciar sesión</a>
-                    </li>
+                        <!-- Opciones para visitantes -->
+                        <asp:PlaceHolder ID="MenuVisitante" runat="server">
 
-                    <li class="nav-item ms-lg-2">
-                        <a class="btn btn-primary" href="Registro.aspx">Regístrate</a>
-                    </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Login.aspx">Iniciar sesión</a>
+                            </li>
 
-                </asp:PlaceHolder>
+                            <li class="nav-item ms-lg-2">
+                                <a class="btn btn-primary" href="Registro.aspx">Regístrate</a>
+                            </li>
 
-                <!-- Opciones para usuarios autenticados -->
-                <asp:PlaceHolder ID="MenuUsuario" runat="server" Visible="false">
+                        </asp:PlaceHolder>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="Carrito.aspx">
-                            <i class="bi bi-cart3"></i> Carrito
-                        </a>
-                    </li>
+                        <!-- Opciones para usuarios autenticados -->
+                        <asp:PlaceHolder ID="MenuUsuario" runat="server" Visible="false">
 
-                    <li class="nav-item">
-                        <span class="nav-link fw-bold">
-                            Hola,
+                            <li class="nav-item">
+                                <a class="nav-link" href="Carrito.aspx">
+                                    <i class="bi bi-cart3"></i>Carrito
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <span class="nav-link fw-bold">Hola,
                             <asp:Label ID="lblNombreUsuario" runat="server"></asp:Label>
-                        </span>
-                    </li>
+                                </span>
+                            </li>
 
-                    <li class="nav-item">
-                        <asp:LinkButton ID="btnCerrarSesion" runat="server"
-                            CssClass="nav-link text-danger"
-                            OnClick="btnCerrarSesion_Click">
+                            <li class="nav-item">
+                                <asp:LinkButton ID="btnCerrarSesion" runat="server"
+                                    CssClass="nav-link text-danger"
+                                    OnClick="btnCerrarSesion_Click">
                             Cerrar sesión
-                        </asp:LinkButton>
-                    </li>
+                                </asp:LinkButton>
+                            </li>
 
-                </asp:PlaceHolder>
+                        </asp:PlaceHolder>
 
-            </ul>
-        </div>
-    </div>
-</nav>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
 
         <h1 class="display-4 fw-bold">Productos</h1>

@@ -18,6 +18,27 @@ namespace CRUD_negocio
                 "~/AccesoDenegado.aspx",
                 "Cliente"
             );
+
+            if (Session["IdUsuario"] != null)
+            {
+                MenuVisitante.Visible = false;
+                MenuUsuario.Visible = true;
+
+                lblNombreUsuario.Text = Session["Usuario"].ToString();
+            }
+            else
+            {
+                MenuVisitante.Visible = true;
+                MenuUsuario.Visible = false;
+            }
+        }
+
+        protected void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+
+            Response.Redirect("Default.aspx");
         }
 
         protected void btnSolicitar_Click(object sender, EventArgs e)
