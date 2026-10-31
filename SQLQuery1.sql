@@ -1,0 +1,1 @@
+﻿SELECT * FROM Pedidos ORDER BY IdPedido DESC;
